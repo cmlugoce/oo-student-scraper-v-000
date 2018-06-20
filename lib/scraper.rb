@@ -12,7 +12,10 @@ class Scraper
    student_array = []
    student = {} 
    
-   doc.css("div.student-card")
+   doc.css("div.student-card").each do |student|
+     student = {
+       :name => 
+     }
    binding.pry 
    
    
