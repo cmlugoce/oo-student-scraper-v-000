@@ -35,7 +35,16 @@ class Scraper
     link = social_media.map {|social_media| social_media.attribute('href').value}
     student = {}
     
-    
+    if link.include?("linkedin")
+              student[:linkedin] = link
+            elsif link.include?("github")
+              student[:github] = link
+            elsif link.include?("twitter")
+              student[:twitter] = link
+            else
+              student[:blog] = link
+            end
+          end
    
    
    
