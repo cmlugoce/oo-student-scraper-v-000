@@ -14,9 +14,14 @@ class Scraper
    
    doc.css("div.student-card").each do |student|
      student = {
-       :name => student.css("h4").text
-       :location => student
+       :name => student.css("h4").text,
+       :location => student.css("p").text,
+       :profile_url => student.css("a").first["href"]
      }
+     
+     student_array << student 
+   end
+   
    binding.pry 
    
    
