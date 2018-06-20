@@ -39,4 +39,4 @@ class Scraper
 
 end
 
-Scraper.scrape_index_page("./fixtures/student-site/index.html")
+Scraper.scrape_profile_page(profile_url)
