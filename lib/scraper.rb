@@ -6,6 +6,8 @@ class Scraper
 attr attr_accessor :name, :location, :profile_url
   def self.scrape_index_page(index_url)
    doc = Nokogiri::HTML(open("./fixtures/student-site/index.html")) 
+   
+   name = doc.css
    binding.pry 
    
    
