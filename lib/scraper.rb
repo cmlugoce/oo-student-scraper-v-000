@@ -12,7 +12,7 @@ class Scraper
    student_array = []
    student = {} 
    
-   doc
+   doc.css("div.student-card")
    binding.pry 
    
    
