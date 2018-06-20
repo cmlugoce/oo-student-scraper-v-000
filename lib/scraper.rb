@@ -7,7 +7,7 @@ class Scraper
    doc = Nokogiri::HTML(open("./fixtures/student-site/index.html")) 
    
    student_array = []
-  
+   student = {}  
    binding.pry 
    
    
