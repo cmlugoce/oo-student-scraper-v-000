@@ -48,10 +48,10 @@ class Scraper
    
    
    
-   student_profile[:profile_quote] = profile_scraper.css('div.profile-quote').text
-    student_profile[:bio] = profile_scraper.css('div.description-holder p').text
+   student[:profile_quote] = social_media.css('div.profile-quote').text
+    student[:bio] = .css('div.description-holder p').text
 
-    student_profile
+    student
   end
 
 end
