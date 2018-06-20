@@ -32,6 +32,7 @@ class Scraper
    
     doc = Nokogiri::HTML(html)
     social_media = doc.css('div.social-icon-container').css('a')
+    link = social_media.map {|social_media| social_media.attribute('href').value}
     student = {}
     
     
