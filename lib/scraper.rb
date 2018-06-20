@@ -5,9 +5,14 @@ class Scraper
  attr_accessor :name, :location, :profile_url
   def self.scrape_index_page(index_url)
    doc = Nokogiri::HTML(open("./fixtures/student-site/index.html")) 
-   
+   #doc.css(".student-card").first
+        #doc.css(".student-card").first.css("h4").text
+        #doc.css(".student-card").first.css("p").text
+      #  doc.css(".student-card").css("a").attribute("href").value
    student_array = []
-   student = {}  
+   student = {} 
+   
+   doc
    binding.pry 
    
    
