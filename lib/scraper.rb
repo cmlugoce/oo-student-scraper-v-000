@@ -22,7 +22,7 @@ class Scraper
      student_array << student 
    end
    
-   binding.pry 
+   
    
    
   end
