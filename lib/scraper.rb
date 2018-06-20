@@ -5,21 +5,21 @@ class Scraper
  attr_accessor :name, :location, :profile_url
   def self.scrape_index_page(index_url)
     html = File.read(index_url)
-    students_page = Nokogiri::HTML(html)
+    page = Nokogiri::HTML(html)
 
-    students_array = []
-    students = {}
+    student_array = []
+    student = {}
 
-    students_page.css('div.student-card').each { |student|
+    page.css('div.student-card').each { |student|
       students = {
         :name => student.css('h4.student-name').text,
         :location => student.css('p.student-location').text,
         :profile_url => student.css('a').first['href']
       }
-      students_array << students
+      student_array << student
     }
 
-    students_array
+    student_array
    end
    
    
