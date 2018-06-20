@@ -32,6 +32,9 @@ class Scraper
     profile_page = Nokogiri::HTML(html)
     social = profile_page.css('div.social-icon-container').css('a')
    
+   
+   
+   binding.pry
   end
 
 end
