@@ -14,7 +14,8 @@ class Scraper
    
    doc.css("div.student-card").each do |student|
      student = {
-       :name => 
+       :name => student.css("h4").text
+       :location => student
      }
    binding.pry 
    
