@@ -30,8 +30,8 @@ class Scraper
   def self.scrape_profile_page(profile_url)
    html = File.read(profile_url)
    
-    profile_page = Nokogiri::HTML(html)
-    social_media = profile_page.css('div.social-icon-container').css('a')
+    doc = Nokogiri::HTML(html)
+    social_media = doc.css('div.social-icon-container').css('a')
     student = {}
     
     
