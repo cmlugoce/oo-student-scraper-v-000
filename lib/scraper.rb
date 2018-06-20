@@ -20,6 +20,8 @@ class Scraper
      }
      
      student_array << student 
+     
+     student_array
    end
    
    
